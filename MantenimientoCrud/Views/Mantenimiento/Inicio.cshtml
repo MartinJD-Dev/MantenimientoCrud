@@ -1,10 +1,10 @@
 ﻿@model MantenimientoCrud.Models.PaginatedLists<MantenimientoCrud.Models.sp_ObtenerCuentaResult>
+
 @{
     ViewBag.Title = "Inicio";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Inicio</h2>
 <div class="row" style="margin-top:30px">
     <div class="col-sm-12">
         <div class="card border-warning">
@@ -12,7 +12,7 @@
                 <h4>Lista de Contactos</h4>
             </div>
             <div class="card-body">
-                <a class="btn btn-success" href="@Url.Action("Registra","Mantenimiento")"> Crear nuevo</a>
+                <a class="btn btn-success" href="@Url.Action("Agregar","Mantenimiento")"> Crear nuevo</a>
                 <hr />
                 <div class="table-responsive">
                     <table class="table table-striped">
