@@ -37,5 +37,29 @@ namespace MantenimientoCrud.Controllers
             }
         }
 
+
+        [HttpGet]
+        public ActionResult Agregar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Agregar(AR_Account c)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var context = new DB_AR_AccountDataContext(connection: connectionString))
+                {
+                    context.sp_InsertarCuenta(c.Number, c.Name, c.ExtCode, c.Title, c.FirstName, c.MiddleName, c.LastName,
+                        c.Suffix, c.Company, c.JobTitle, c.Address1, c.Address2, c.City, c.State, c.Zip, c.Country,
+                        c.PhoneNumber, c.MobileNumber, c.FaxNumber, c.EMail, c.HomePage, c.IMAddress, c.StatementAddress);
+                        
+
+                }
+            }
+            return RedirectToAction("Inicio","Mantenimiento");
+        }
+
     }
 }
