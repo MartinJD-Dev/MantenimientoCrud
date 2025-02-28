@@ -9,7 +9,7 @@
     <div class="col-sm-12">
         <div class="card border-warning">
             <div class="card-header bg-warning">
-                <h4>Lista de AR_Account</h4>
+                <h4>Cuentas AR</h4>
             </div>
             <div class="card-body">
                 <a class="btn btn-success" href="@Url.Action("Agregar","Mantenimiento")"> Crear nuevo</a>
@@ -24,7 +24,7 @@
                                 <th>Pais</th>
                                 <th>Telefono</th>
                                 <th>Correo</th>
-                                <th>Cierre</th>
+                                <th>Fecha de Cierre</th>
                                 <th>Notas</th>
                                 <th style="width:150px"></th>
                             </tr>
@@ -54,18 +54,30 @@
                     <div class="pagination">
                         @if (Model.HasPreviousPage)
                         {
-                            <a href="@Url.Action("Inicio", new { pageNumber = Model.PageNumber - 1, pageSize = Model.PageSize })">Anterior</a>
+                            <li class="page-item">
+                                <a class="page-link" href="@Url.Action("Inicio", new { pageNumber = Model.PageNumber - 1, pageSize = Model.PageSize })">&laquo; Anterior</a>
+                            </li>
                         }
 
-                        @for (int i = 1; i <= Model.TotalPages; i++)
+                        @{
+                            int startPage = Math.Max(1, Model.PageNumber - 5);
+                            int endPage = Math.Min(Model.TotalPages, Model.PageNumber + 5);
+                        }
+
+                        @for (int i = startPage; i <= endPage; i++)
                         {
-                            <a href="@Url.Action("Inicio", new { pageNumber = i, pageSize = Model.PageSize })" class="@(i == Model.PageNumber ? "current" : "")">@i</a>
+                            <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+                                <a class="page-link" href="@Url.Action("Inicio", new { pageNumber = i, pageSize = Model.PageSize })">@i</a>
+                            </li>
                         }
 
                         @if (Model.HasNextPage)
                         {
-                            <a href="@Url.Action("Inicio", new { pageNumber = Model.PageNumber + 1, pageSize = Model.PageSize })">Siguiente</a>
+                            <li class="page-item">
+                                <a class="page-link" href="@Url.Action("Inicio", new { pageNumber = Model.PageNumber + 1, pageSize = Model.PageSize })">Siguiente &raquo;</a>
+                            </li>
                         }
+
                     </div>
                 </div>
             </div>

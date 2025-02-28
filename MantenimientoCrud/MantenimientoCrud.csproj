@@ -130,11 +130,84 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_AR_Account.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Models\PaginatedList.cs" />
     <Compile Include="Models\PaginatedLists.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="adminlte\assets\img\AdminLTEFullLogo.png" />
+    <Content Include="adminlte\assets\img\AdminLTELogo.png" />
+    <Content Include="adminlte\assets\img\avatar.png" />
+    <Content Include="adminlte\assets\img\avatar2.png" />
+    <Content Include="adminlte\assets\img\avatar3.png" />
+    <Content Include="adminlte\assets\img\avatar4.png" />
+    <Content Include="adminlte\assets\img\avatar5.png" />
+    <Content Include="adminlte\assets\img\boxed-bg.jpg" />
+    <Content Include="adminlte\assets\img\boxed-bg.png" />
+    <Content Include="adminlte\assets\img\credit\american-express.png" />
+    <Content Include="adminlte\assets\img\credit\cirrus.png" />
+    <Content Include="adminlte\assets\img\credit\mastercard.png" />
+    <Content Include="adminlte\assets\img\credit\paypal.png" />
+    <Content Include="adminlte\assets\img\credit\paypal2.png" />
+    <Content Include="adminlte\assets\img\credit\visa.png" />
+    <Content Include="adminlte\assets\img\default-150x150.png" />
+    <Content Include="adminlte\assets\img\icons.png" />
+    <Content Include="adminlte\assets\img\photo1.png" />
+    <Content Include="adminlte\assets\img\photo2.png" />
+    <Content Include="adminlte\assets\img\photo3.jpg" />
+    <Content Include="adminlte\assets\img\photo4.jpg" />
+    <Content Include="adminlte\assets\img\prod-1.jpg" />
+    <Content Include="adminlte\assets\img\prod-2.jpg" />
+    <Content Include="adminlte\assets\img\prod-3.jpg" />
+    <Content Include="adminlte\assets\img\prod-4.jpg" />
+    <Content Include="adminlte\assets\img\prod-5.jpg" />
+    <Content Include="adminlte\assets\img\user1-128x128.jpg" />
+    <Content Include="adminlte\assets\img\user2-160x160.jpg" />
+    <Content Include="adminlte\assets\img\user3-128x128.jpg" />
+    <Content Include="adminlte\assets\img\user4-128x128.jpg" />
+    <Content Include="adminlte\assets\img\user5-128x128.jpg" />
+    <Content Include="adminlte\assets\img\user6-128x128.jpg" />
+    <Content Include="adminlte\assets\img\user7-128x128.jpg" />
+    <Content Include="adminlte\assets\img\user8-128x128.jpg" />
+    <Content Include="adminlte\css\adminlte.css" />
+    <Content Include="adminlte\css\adminlte.min.css" />
+    <Content Include="adminlte\css\adminlte.rtl.css" />
+    <Content Include="adminlte\css\adminlte.rtl.min.css" />
+    <Content Include="adminlte\js\adminlte.js" />
+    <Content Include="adminlte\js\adminlte.min.js" />
+    <Content Include="adminlte\pages\docs\browser-support.html" />
+    <Content Include="adminlte\pages\docs\color-mode.html" />
+    <Content Include="adminlte\pages\docs\components\main-header.html" />
+    <Content Include="adminlte\pages\docs\components\main-sidebar.html" />
+    <Content Include="adminlte\pages\docs\faq.html" />
+    <Content Include="adminlte\pages\docs\how-to-contribute.html" />
+    <Content Include="adminlte\pages\docs\introduction.html" />
+    <Content Include="adminlte\pages\docs\javascript\treeview.html" />
+    <Content Include="adminlte\pages\docs\layout.html" />
+    <Content Include="adminlte\pages\docs\license.html" />
+    <Content Include="adminlte\pages\examples\lockscreen.html" />
+    <Content Include="adminlte\pages\examples\login-v2.html" />
+    <Content Include="adminlte\pages\examples\login.html" />
+    <Content Include="adminlte\pages\examples\register-v2.html" />
+    <Content Include="adminlte\pages\examples\register.html" />
+    <Content Include="adminlte\pages\forms\general.html" />
+    <Content Include="adminlte\pages\generate\theme.html" />
+    <Content Include="adminlte\pages\index.html" />
+    <Content Include="adminlte\pages\index2.html" />
+    <Content Include="adminlte\pages\index3.html" />
+    <Content Include="adminlte\pages\layout\collapsed-sidebar.html" />
+    <Content Include="adminlte\pages\layout\fixed-sidebar.html" />
+    <Content Include="adminlte\pages\layout\layout-custom-area.html" />
+    <Content Include="adminlte\pages\layout\layout-rtl.html" />
+    <Content Include="adminlte\pages\layout\logo-switch.html" />
+    <Content Include="adminlte\pages\layout\sidebar-mini.html" />
+    <Content Include="adminlte\pages\layout\unfixed-sidebar.html" />
+    <Content Include="adminlte\pages\tables\simple.html" />
+    <Content Include="adminlte\pages\UI\general.html" />
+    <Content Include="adminlte\pages\UI\icons.html" />
+    <Content Include="adminlte\pages\UI\timeline.html" />
+    <Content Include="adminlte\pages\widgets\cards.html" />
+    <Content Include="adminlte\pages\widgets\info-box.html" />
+    <Content Include="adminlte\pages\widgets\small-box.html" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -165,6 +238,12 @@
       <LastGenOutput>DB_AR_Account.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="adminlte\css\adminlte.css.map" />
+    <Content Include="adminlte\css\adminlte.min.css.map" />
+    <Content Include="adminlte\css\adminlte.rtl.css.map" />
+    <Content Include="adminlte\css\adminlte.rtl.min.css.map" />
+    <Content Include="adminlte\js\adminlte.js.map" />
+    <Content Include="adminlte\js\adminlte.min.js.map" />
     <None Include="Models\DB_AR_Account.dbml.layout">
       <DependentUpon>DB_AR_Account.dbml</DependentUpon>
     </None>
