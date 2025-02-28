@@ -9,7 +9,7 @@
     <div class="col-sm-12">
         <div class="card border-warning">
             <div class="card-header bg-warning">
-                <h4>Lista de Contactos</h4>
+                <h4>Lista de AR_Account</h4>
             </div>
             <div class="card-body">
                 <a class="btn btn-success" href="@Url.Action("Agregar","Mantenimiento")"> Crear nuevo</a>
@@ -43,7 +43,9 @@
                                     <td>@item.Notes</td>
                                     <td>
                                         <a class="btn btn-primary btn-sm" href="@Url.Action("Editar","Mantenimiento", new { id = item.ID})">Editar</a>
-                                        <a class="btn btn-danger btn-sm">Eliminar</a>
+                                        <form action="@Url.Action("Eliminar", "Mantenimiento", new { id = item.ID })" method="post" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este registro?');">
+                                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                        </form>
                                     </td>
                                 </tr>
                             }
