@@ -5,137 +5,140 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="row" style="margin-top:30px">
-    <div>
-    <div class="col-sm-12">
-        <div class="card border-warning">
-            <div class="card-header bg-warning">
-                <h4>Registrar</h4>
-            </div>
-            <div class="card-body">
-                <form action="@Url.Action("Agregar","Mantenimiento")" method="post">
-
-       
-                    <div class="form-group">
-                        <label>Number</label>
-                        <input type="text" name="Number" value="@Html.DisplayTextFor(m => m.Number)" required maxlength="20"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" name="Name" value="@Html.DisplayTextFor(m => m.Name)" required maxlength="50" />
-                    </div>
-
-                    <div class="form-group">
-                        <label>ExtCode</label>
-                        <input type="text" name="ExtCode" value="@Html.DisplayTextFor(m => m.ExtCode)" required maxlength="20"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Title</label>
-                        <input type="text" name="Title" value="@Html.DisplayTextFor(m => m.Title)" required maxlength="20"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>FirstName</label>
-                        <input type="text" name="FirstName" value="@Html.DisplayTextFor(m => m.FirstName)" required maxlength="30"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>MiddleName</label>
-                        <input type="text" name="MiddleName" value="@Html.DisplayTextFor(m => m.MiddleName)" required maxlength="30"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>LastName</label>
-                        <input type="text" name="LastName" value="@Html.DisplayTextFor(m => m.LastName)" required maxlength="50"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Suffix</label>
-                        <input type="text" name="Suffix" value="@Html.DisplayTextFor(m => m.Suffix)" required maxlength="20"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Company</label>
-                        <input type="text" name="Company" value="@Html.DisplayTextFor(m => m.Company)" required maxlength="50"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>JobTitle</label>
-                        <input type="text" name="JobTitle" value="@Html.DisplayTextFor(m => m.JobTitle)" required maxlength="50"/>
-                    </div>
- 
-                    <div class="form-group">
-                        <label>Address1</label>
-                        <input type="text" name="Address1" value="@Html.DisplayTextFor(m => m.Address1)" required maxlength="50"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Address2</label>
-                        <input type="text" name="Address2" value="@Html.DisplayTextFor(m => m.Address2)" required maxlength="50"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>City</label>
-                        <input type="text" name="City" value="@Html.DisplayTextFor(m => m.City)" required maxlength="50"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>State</label>
-                        <input type="text" name="State" value="@Html.DisplayTextFor(m => m.State)" required maxlength="20"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Zip</label>
-                        <input type="text" name="Zip" value="@Html.DisplayTextFor(m => m.Zip)" required maxlength="20"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Country</label>
-                        <input type="text" name="Country" value="@Html.DisplayTextFor(m => m.Country)" required maxlength="30"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>PhoneNumber</label>
-                        <input type="text" name="PhoneNumber" value="@Html.DisplayTextFor(m => m.PhoneNumber)" required maxlength="30"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>MobileNumber</label>
-                        <input type="text" name="MobileNumber" value="@Html.DisplayTextFor(m => m.MobileNumber)" required maxlength="30"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>FaxNumber</label>
-                        <input type="text" name="FaxNumber" value="@Html.DisplayTextFor(m => m.FaxNumber)" required maxlength="30"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>EMail</label>
-                        <input type="text" name="EMail" value="@Html.DisplayTextFor(m => m.EMail)" required maxlength="255"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>HomePage</label>
-                        <input type="text" name="HomePage" value="@Html.DisplayTextFor(m => m.HomePage)" required maxlength="255"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>IMAddress</label>
-                        <input type="text" name="IMAddress" value="@Html.DisplayTextFor(m => m.IMAddress)" required maxlength="50"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>StatementAddress</label>
-                        <input type="text" name="StatementAddress" value="@Html.DisplayTextFor(m => m.StatementAddress)" required maxlength="255"/>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-                    <a class="btn btn-warning" href="@Url.Action("Inicio","Mantenimiento")">Volver</a>
-                </form>
-            </div>
+<div class="container-fluid mt-3">
+    <div class="card card-warning">
+        <div class="card-header">
+            <h3 class="card-title">Registrar</h3>
         </div>
-    </div></div>
-</div>
+        <div class="card-body">
+            <form action="@Url.Action("Agregar","Mantenimiento")" method="post">
 
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Number">Numero</label>
+                            <input type="text" class="form-control" id="Number" name="Number" value="@Html.DisplayTextFor(m => m.Number)" required maxlength="20" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Name">Nombre</label>
+                            <input type="text" class="form-control" id="Name" name="Name" value="@Html.DisplayTextFor(m => m.Name)" required maxlength="50" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ExtCode">ExtCodigo</label>
+                            <input type="text" class="form-control" id="ExtCode" name="ExtCode" value="@Html.DisplayTextFor(m => m.ExtCode)" required maxlength="20" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Title">Titulo</label>
+                            <input type="text" class="form-control" id="Title" name="Title" value="@Html.DisplayTextFor(m => m.Title)" required maxlength="20" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="FirstName">Primer Nombre</label>
+                            <input type="text" class="form-control" id="FirstName" name="FirstName" value="@Html.DisplayTextFor(m => m.FirstName)" required maxlength="30" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="MiddleName">Segundo Nombre</label>
+                            <input type="text" class="form-control" id="MiddleName" name="MiddleName" value="@Html.DisplayTextFor(m => m.MiddleName)" required maxlength="30" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="LastName">Apellido</label>
+                            <input type="text" class="form-control" id="LastName" name="LastName" value="@Html.DisplayTextFor(m => m.LastName)" required maxlength="50" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Suffix">Sufijo</label>
+                            <input type="text" class="form-control" id="Suffix" name="Suffix" value="@Html.DisplayTextFor(m => m.Suffix)" required maxlength="20" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Company">Compañia</label>
+                            <input type="text" class="form-control" id="Company" name="Company" value="@Html.DisplayTextFor(m => m.Company)" required maxlength="50" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="JobTitle">Titulo Profesional</label>
+                            <input type="text" class="form-control" id="JobTitle" name="JobTitle" value="@Html.DisplayTextFor(m => m.JobTitle)" required maxlength="50" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Address1">Direccion 1</label>
+                            <input type="text" class="form-control" id="Address1" name="Address1" value="@Html.DisplayTextFor(m => m.Address1)" required maxlength="50" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Address2">Direccion 2</label>
+                            <input type="text" class="form-control" id="Address2" name="Address2" value="@Html.DisplayTextFor(m => m.Address2)" required maxlength="50" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="City">Ciudad</label>
+                            <input type="text" class="form-control" id="City" name="City" value="@Html.DisplayTextFor(m => m.City)" required maxlength="50" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="State">Estado</label>
+                            <input type="text" class="form-control" id="State" name="State" value="@Html.DisplayTextFor(m => m.State)" required maxlength="20" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Zip">Codigo Postal</label>
+                            <input type="text" class="form-control" id="Zip" name="Zip" value="@Html.DisplayTextFor(m => m.Zip)" required maxlength="20" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Country">Pais</label>
+                    <input type="text" class="form-control" id="Country" name="Country" value="@Html.DisplayTextFor(m => m.Country)" required maxlength="30" />
+                </div>
+
+                <div class="form-group">
+                    <label for="PhoneNumber">Telefono</label>
+                    <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" value="@Html.DisplayTextFor(m => m.PhoneNumber)" required maxlength="30" />
+                </div>
+
+                <div class="form-group">
+                    <label for="MobileNumber">Celular</label>
+                    <input type="text" class="form-control" id="MobileNumber" name="MobileNumber" value="@Html.DisplayTextFor(m => m.MobileNumber)" required maxlength="30" />
+                </div>
+
+                <div class="form-group">
+                    <label for="FaxNumber">Numero de Fax</label>
+                    <input type="text" class="form-control" id="FaxNumber" name="FaxNumber" value="@Html.DisplayTextFor(m => m.FaxNumber)" required maxlength="30" />
+                </div>
+
+                <div class="form-group">
+                    <label for="EMail">Correo</label>
+                    <input type="text" class="form-control" id="EMail" name="EMail" value="@Html.DisplayTextFor(m => m.EMail)" required maxlength="255" />
+                </div>
+
+                <div class="form-group">
+                    <label for="HomePage">Pagina Principal</label>
+                    <input type="text" class="form-control" id="HomePage" name="HomePage" value="@Html.DisplayTextFor(m => m.HomePage)" required maxlength="255" />
+                </div>
+
+                <div class="form-group">
+                    <label for="IMAddress">Correo IM</label>
+                    <input type="text" class="form-control" id="IMAddress" name="IMAddress" value="@Html.DisplayTextFor(m => m.IMAddress)" required maxlength="50" />
+                </div>
+
+                <div class="form-group">
+                    <label for="StatementAddress">Direccion de declaracion</label>
+                    <input type="text" class="form-control" id="StatementAddress" name="StatementAddress" value="@Html.DisplayTextFor(m => m.StatementAddress)" required maxlength="255" />
+                </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <a class="btn btn-warning" href="@Url.Action("Inicio","Mantenimiento")">Volver</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
