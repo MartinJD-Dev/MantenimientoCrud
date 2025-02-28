@@ -1,7 +1,6 @@
 ﻿using MantenimientoCrud.Models;
 using System;
 using System.Configuration;
-using System.Drawing.Printing;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -89,5 +88,14 @@ namespace MantenimientoCrud.Controllers
             return RedirectToAction("Inicio", "Mantenimiento");
         }
 
+        [HttpPost]
+        public ActionResult Eliminar(int? id)
+        {
+            using (var context = new DB_AR_AccountDataContext(connection: connectionString))
+            {
+                context.sp_EliminarCuenta(id);
+            }
+            return RedirectToAction("Inicio", "Mantenimiento");
+        }
     }
 }

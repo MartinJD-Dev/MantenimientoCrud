@@ -43,7 +43,9 @@
                                     <td>@item.Notes</td>
                                     <td>
                                         <a class="btn btn-primary btn-sm" href="@Url.Action("Editar","Mantenimiento", new { id = item.ID})">Editar</a>
-                                        <a class="btn btn-danger btn-sm">Eliminar</a>
+                                        <form action="@Url.Action("Eliminar", "Mantenimiento", new { id = item.ID })" method="post" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este registro?');">
+                                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                        </form>
                                     </td>
                                 </tr>
                             }
