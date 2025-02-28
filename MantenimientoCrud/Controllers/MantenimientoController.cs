@@ -65,6 +65,9 @@ namespace MantenimientoCrud.Controllers
         [HttpGet]
         public ActionResult Editar(int? id)
         {
+            if(id == null)
+                return RedirectToAction("Inicio", "Mantenimiento");
+
             using (var context = new DB_AR_AccountDataContext(connection: connectionString))
             {
                 var c = context.AR_Account.FirstOrDefault(x => x.ID == id);
