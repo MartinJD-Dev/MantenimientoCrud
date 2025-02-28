@@ -91,6 +91,9 @@ namespace MantenimientoCrud.Controllers
         [HttpPost]
         public ActionResult Eliminar(int? id)
         {
+            if (id == null)
+                return RedirectToAction("Inicio", "Mantenimiento");
+
             using (var context = new DB_AR_AccountDataContext(connection: connectionString))
             {
                 context.sp_EliminarCuenta(id);
