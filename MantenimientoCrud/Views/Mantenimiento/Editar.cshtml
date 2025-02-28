@@ -1,0 +1,55 @@
+﻿@model MantenimientoCrud.Models.AR_Account
+
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+        <div class="card border-warning">
+            <div class="card-header bg-warning">
+                <h4>Editar</h4>
+            </div>
+            <div class="card-body">
+                <form action="@Url.Action("Editar","Mantenimiento")" method="post">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" name="Name" value="@Html.DisplayTextFor(m => m.Name)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Compañia</label>
+                        <input type="text" name="Company" value="@Html.DisplayTextFor(m => m.Company)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Cuidad</label>
+                        <input type="text" name="City" value="@Html.DisplayTextFor(m => m.City)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Pais</label>
+                        <input type="text" name="Country" value="@Html.DisplayTextFor(m => m.Country)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Telefono</label>
+                        <input type="text" name="PhoneNumber" value="@Html.DisplayTextFor(m => m.PhoneNumber)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Correo</label>
+                        <input type="text" name="EMail" value="@Html.DisplayTextFor(m => m.EMail)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Cierre</label>
+                        <input type="datetime-local" name="ClosingDate"
+                               value="@(Model.ClosingDate.HasValue ? Model.ClosingDate.Value.ToString("yyyy-MM-ddTHH:mm") : "")" />
+                    </div>
+                    <div class="form-group">
+                        <label>Notas</label>
+                        <input type="text" name="Notes" value="@Html.DisplayTextFor(m => m.Notes)" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    <a class="btn btn-warning" href="@Url.Action("Inicio","Mantenimiento")">Cancelar Cambios</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

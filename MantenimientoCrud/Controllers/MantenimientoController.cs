@@ -1,6 +1,7 @@
 ﻿using MantenimientoCrud.Models;
 using System;
 using System.Configuration;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -59,6 +60,30 @@ namespace MantenimientoCrud.Controllers
                 }
             }
             return RedirectToAction("Inicio","Mantenimiento");
+        }
+
+        [HttpGet]
+        public ActionResult Editar(int? id)
+        {
+            using (var context = new DB_AR_AccountDataContext(connection: connectionString))
+            {
+                var c = context.AR_Account.FirstOrDefault(x => x.ID == id);
+
+                return View(c);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult Editar(AR_Account c)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var context = new DB_AR_AccountDataContext(connection: connectionString))
+                {
+                    context.sp_ActualizarCuenta(c.ID, c.Name, c.Company, c.City, c.Country, c.PhoneNumber, c.EMail, c.ClosingDate, c.Notes);
+                }
+            }
+            return RedirectToAction("Inicio", "Mantenimiento");
         }
 
     }
