@@ -131,7 +131,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_AR_Account.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Models\PaginatedLists.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
